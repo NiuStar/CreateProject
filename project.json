@@ -1,0 +1,9 @@
+{
+  "name":"Template",
+  "method":[
+    {
+      "name":"Test",
+      "type":"POST"
+    }
+  ]
+}
