@@ -68,7 +68,7 @@ https://www.myide.cn/html/autoServ/login.html
 
 ## API接口：
 
-https://www.myide.cn/html/ReadMe.html
+https://www.myide.cn/ReadMe.html
 
 ## 最后总结：
 
