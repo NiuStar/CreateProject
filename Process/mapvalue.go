@@ -49,11 +49,11 @@ func mapValue(list map[string]interface{},operator string,imports_list map[strin
 
 	result += "["
 
-	r , ok ,imports_l:= Process(list["key"].(map[string]interface{}),imports_list)
+	r , ok ,imports_l:= Process(list["right"].(map[string]interface{}),imports_list)
 
 	if !ok {
 		fmt.Println(`mapValue(list map[string]interface{},operator string) (result string,ok bool)`)
-		fmt.Println(list["key"])
+		fmt.Println(list["left"])
 		return
 	}
 	for k,v := range imports_l {

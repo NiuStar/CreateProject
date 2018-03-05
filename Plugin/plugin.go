@@ -5,6 +5,8 @@ import (
 	"go/format"
 	"github.com/NiuStar/utils"
 	"time"
+	//"fmt"
+	//"encoding/json"
 )
 
 
@@ -108,7 +110,14 @@ func getFuncs(data string,classes map[string]interface{}) (list []Func) {
 
 			p := getParams(list2[0])
 
-			//fmt.Println("params:",list2[0])
+			/*fmt.Println(name,"params:",list2[0])
+
+			{
+				b,_ := json.Marshal(p)
+				fmt.Println(name,"p : ",string(b))
+			}*/
+
+
 			//fmt.Println("result:",list2[1])
 
 			r := getResults(strings.Split(list2[1],"{")[0])
@@ -124,8 +133,12 @@ func getFuncs(data string,classes map[string]interface{}) (list []Func) {
 func getParams(data string) (list []Params) {
 
 
+	if len(strings.TrimSpace(data)) <= 0 {
+		return
+	}
 	list1 := strings.Split(data,", ")
 
+	//fmt.Println(" len(list1) : ",len(list1),list1)
 	for i := 0;i < len(list1) ; i ++ {
 		list2 := strings.Split(list1[i]," ")
 		var type_ string
